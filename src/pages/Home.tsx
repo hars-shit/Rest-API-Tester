@@ -14,7 +14,7 @@ import { TbLogout } from 'react-icons/tb';
 export default function ApiTesterUI({ setHasUser }: { setHasUser: React.Dispatch<React.SetStateAction<boolean>> }) {
     const navigate=useNavigate()
     const codeRef = useRef<HTMLElement | null>(null)
-    const [activeSideTab, setActiveSideTab] = useState<boolean>(true)
+    let activeSideTab=true
     const [activeTab, setActiveTab] = useState<string>('params')
     const [url, setUrl] = useState<string>('')
     const [method, setMethod] = useState<string>('GET')
